@@ -7,11 +7,11 @@ before or not - and shows error if an unexpected variable is typed
 show_instructions = input("Have you played this quiz before? (Yes/No): ")
 
 # if they say yes, output 'program continues'
-if show_instructions == "yes" or show_instructions == "y":
+if show_instructions == "yes":
     print("Program continues")
 
 # if they say no, output 'display instructions'
-elif show_instructions == "no" or show_instructions == "n":
+elif show_instructions == "no":
     print("Display instructions")
 
 

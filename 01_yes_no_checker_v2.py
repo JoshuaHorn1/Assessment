@@ -1,10 +1,15 @@
-"""Maori Quiz Yes / No checker v2
+"""Maori Quiz Yes / No checker v2 - based on v1
 simplifies the input by converting it to a lower case. also accepts y or n as
 abbreviations. prints result of users choice as input - for testing
+adds welcome note
 """
 
+# welcome note:
+print("Welcome to The Maori Quiz! (Maori Numbers 1-10)")
+print()
+
 # Ask the user if they have played before
-show_instructions = input("Have you played Lucky Unicorn before? (Yes/No): ").lower()
+show_instructions = input("Have you played this Quiz before? (Yes/No): ").lower()
 
 # if they say yes, output 'program continues'
 if show_instructions == "yes" or show_instructions == "y":
