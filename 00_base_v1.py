@@ -27,11 +27,11 @@ def yes_no(question_text):
             print("Please answer 'Yes (Y)' or 'No (N)'")
 
 
-# function used to display instructions:
+# Function used to display instructions:
 def display_instructions():
     print("**** How to Play ****\n"
           "\n"
-          "how to use the quiz will go here\n"
+          "(how to use the program will go here)\n"
           "\n")
 
 
@@ -40,7 +40,10 @@ print("Welcome to The Maori Quiz! (Maori Numbers 1-10)")
 print()
 
 show_instructions = yes_no("Have you played this game before?: ")
-print(f"You entered '{show_instructions}'")
+print()
 
-if show_instructions == "Yes":
-    display_instructions
+if show_instructions == "No":
+    display_instructions()
+
+else:
+    exit()

@@ -1,18 +1,17 @@
-"""Maori Quiz Instructions Display function v1
+"""Maori Quiz Instructions code v1
+Code used to display instructions - will be used with 02_yes_no_function_v1
 """
 
-# functions go here...
+# Main Routine...
+show_instructions = yes_no("Have you played this game before?: ")
+print(f"You entered '{show_instructions}'")
 
+if show_instructions == "Yes":
+    print("Welcome to The Maori Quiz!")
+    print()
+    print("instructions to display will go here")
+    print()
+    print("Program continues.")
 
-# function used to display instructions
-def display_instructions():
-    print("**** How to Play ****\n"
-          "\n"
-          "how to use the quiz will go here\n"
-          "\n"
-          "program continues\n"
-          "\n")
-
-
-# main routine goes here...
-display_instructions()
+else:
+    print("Program continues.")
