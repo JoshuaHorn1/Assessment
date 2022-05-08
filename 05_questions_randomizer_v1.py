@@ -1,5 +1,6 @@
-"""Maori Quiz Numbers Randomizer
-
+"""Maori Quiz Questions/Randomizer v1
+Randomizes a list containing the maori numbers and answers
+and then prints evidence of its randomization
 """
 
 import random
@@ -9,7 +10,6 @@ maori_numbers = [["one", "tahi"], ["two", "rua"], ["three", "toru"],
                  ["seven", "whitu"], ["eight", "waru"], ["nine", "iwa"],
                  ["ten", "tekau"]]  # A list storing all the data for english and maori numbers 1-10
 
-random = random.randint(1, 10)
+random.shuffle(maori_numbers)  # shuffles contents of the list
 
-
-print(f"What is {maori_numbers} in Maori?: ")
+print(maori_numbers)  # prints the randomized list as evidence it works
