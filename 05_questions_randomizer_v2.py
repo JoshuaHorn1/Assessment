@@ -1,6 +1,6 @@
 """Maori Quiz Questions/Randomizer v2
 Splits the list from 05_questions_randomizer_v1 into 2 lists
-with questions and answers seperated into different variables
+with questions and answers separated into different variables
 """
 
 import random
