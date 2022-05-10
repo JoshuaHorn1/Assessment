@@ -8,6 +8,14 @@ player_total = 0
 
 
 # function containing questions and data
+def display_instructions():
+    print("**** How to Play ****\n"
+          "\n"
+          "(how to use the program will go here)\n"
+          "\n")
+
+
+# function containing questions and data
 def questions():
 
     player = 0
@@ -23,30 +31,30 @@ def questions():
     ask_9 = ""
     ask_10 = ""
 
-    QUESTION_1 = "one"  # the first questions
-    QUESTION_2 = "two"  # the second question
-    QUESTION_3 = "three"  # etc...
-    QUESTION_4 = "four"
-    QUESTION_5 = "five"
-    QUESTION_6 = "six"
-    QUESTION_7 = "seven"
-    QUESTION_8 = "eight"
-    QUESTION_9 = "nine"
-    QUESTION_10 = "ten"
+    question_1 = "one"  # the first questions
+    question_2 = "two"  # the second question
+    question_3 = "three"  # etc...
+    question_4 = "four"
+    question_5 = "five"
+    question_6 = "six"
+    question_7 = "seven"
+    question_8 = "eight"
+    question_9 = "nine"
+    question_10 = "ten"
 
-    ANSWER_1 = "tahi"  # the first answer
-    ANSWER_2 = "rua"  # the second answer
-    ANSWER_3 = "toru"  # etc...
-    ANSWER_4 = "wha"
-    ANSWER_5 = "rima"
-    ANSWER_6 = "ono"
-    ANSWER_7 = "whitu"
-    ANSWER_8 = "waru"
-    ANSWER_9 = "iwa"
-    ANSWER_10 = "tekau"
+    answer_1 = "tahi"  # the first answer
+    answer_2 = "rua"  # the second answer
+    answer_3 = "toru"  # etc...
+    answer_4 = "wha"
+    answer_5 = "rima"
+    answer_6 = "ono"
+    answer_7 = "whitu"
+    answer_8 = "waru"
+    answer_9 = "iwa"
+    answer_10 = "tekau"
 
-    ask_1 = input(f"What is the maori version of '{QUESTION_1}'? (No Macron's): ")  # asks the user a question
-    if ask_1 == ANSWER_1:  # if they get it right display total and congratulations message
+    ask_1 = input(f"What is the maori version of '{question_1}'? (No Macron's): ")  # asks the user a question
+    if ask_1 == answer_1:  # if they get it right display total and congratulations message
         player += 1
         print()
         print("You got it right!")
@@ -55,12 +63,12 @@ def questions():
     else:  # if they get it wrong display the correct answer and total
         print()
         print("Sorry, that's wrong")
-        print(f"The correct answer was '{ANSWER_1}'")
+        print(f"The correct answer was '{answer_1}'")
         print(f"You currently have a total of {player}/{TOTAL}!")
         print()
 
-    ask_2 = input(f"What is the maori version of '{QUESTION_2}'? (No Macron's): ")
-    if ask_2 == ANSWER_2:
+    ask_2 = input(f"What is the maori version of '{question_2}'? (No Macron's): ")
+    if ask_2 == answer_2:
         player += 1
         print()
         print("You got it right!")
@@ -69,12 +77,12 @@ def questions():
     else:
         print()
         print("Sorry, that's wrong")
-        print(f"The correct answer was '{ANSWER_2}'")
+        print(f"The correct answer was '{answer_2}'")
         print(f"You currently have a total of {player}/{TOTAL}!")
         print()
 
-    ask_3 = input(f"What is the maori version of '{QUESTION_3}'? (No Macron's): ")
-    if ask_3 == ANSWER_3:
+    ask_3 = input(f"What is the maori version of '{question_3}'? (No Macron's): ")
+    if ask_3 == answer_3:
         player += 1
         print()
         print("You got it right!")
@@ -83,12 +91,12 @@ def questions():
     else:
         print()
         print("Sorry, that's wrong")
-        print(f"The correct answer was '{ANSWER_3}'")
+        print(f"The correct answer was '{answer_3}'")
         print(f"You currently have a total of {player}/{TOTAL}!")
         print()
 
-    ask_4 = input(f"What is the maori version of '{QUESTION_4}'? (No Macron's): ")
-    if ask_4 == ANSWER_4:
+    ask_4 = input(f"What is the maori version of '{question_4}'? (No Macron's): ")
+    if ask_4 == question_4:
         player += 1
         print()
         print("You got it right!")
@@ -97,12 +105,12 @@ def questions():
     else:
         print()
         print("Sorry, that's wrong")
-        print(f"The correct answer was '{ANSWER_4}'")
+        print(f"The correct answer was '{answer_4}'")
         print(f"You currently have a total of {player}/{TOTAL}!")
         print()
 
-    ask_5 = input(f"What is the maori version of '{QUESTION_5}'? (No Macron's): ")
-    if ask_5 == ANSWER_5:
+    ask_5 = input(f"What is the maori version of '{question_5}'? (No Macron's): ")
+    if ask_5 == answer_5:
         player += 1
         print()
         print("You got it right!")
@@ -111,12 +119,12 @@ def questions():
     else:
         print()
         print("Sorry, that's wrong")
-        print(f"The correct answer was '{ANSWER_5}'")
+        print(f"The correct answer was '{answer_5}'")
         print(f"You currently have a total of {player}/{TOTAL}!")
         print()
 
-    ask_6 = input(f"What is the maori version of '{QUESTION_6}'? (No Macron's): ")
-    if ask_6 == ANSWER_6:
+    ask_6 = input(f"What is the maori version of '{question_6}'? (No Macron's): ")
+    if ask_6 == answer_6:
         player += 1
         print()
         print("You got it right!")
@@ -125,12 +133,12 @@ def questions():
     else:
         print()
         print("Sorry, that's wrong")
-        print(f"The correct answer was '{ANSWER_6}'")
+        print(f"The correct answer was '{answer_6}'")
         print(f"You currently have a total of {player}/{TOTAL}!")
         print()
 
-    ask_7 = input(f"What is the maori version of '{QUESTION_7}'? (No Macron's): ")
-    if ask_7 == ANSWER_7:
+    ask_7 = input(f"What is the maori version of '{question_7}'? (No Macron's): ")
+    if ask_7 == answer_7:
         player += 1
         print()
         print("You got it right!")
@@ -139,12 +147,12 @@ def questions():
     else:
         print()
         print("Sorry, that's wrong")
-        print(f"The correct answer was '{ANSWER_7}'")
+        print(f"The correct answer was '{answer_7}'")
         print(f"You currently have a total of {player}/{TOTAL}!")
         print()
 
-    ask_8 = input(f"What is the maori version of '{QUESTION_8}'? (No Macron's): ")
-    if ask_8 == ANSWER_8:
+    ask_8 = input(f"What is the maori version of '{questions_8}'? (No Macron's): ")
+    if ask_8 == answer_8:
         player += 1
         print()
         print("You got it right!")
@@ -153,12 +161,12 @@ def questions():
     else:
         print()
         print("Sorry, that's wrong")
-        print(f"The correct answer was '{ANSWER_8}'")
+        print(f"The  correct answer was '{answer_8}'")
         print(f"You currently have a total of {player}/{TOTAL}!")
         print()
 
-    ask_9 = input(f"What is the maori version of '{QUESTION_9}'? (No Macron's): ")
-    if ask_9 == ANSWER_9:
+    ask_9 = input(f"What is the maori version of '{question_9}'? (No Macron's): ")
+    if ask_9 == answer_9:
         player += 1
         print()
         print("You got it right!")
@@ -167,12 +175,12 @@ def questions():
     else:
         print()
         print("Sorry, that's wrong")
-        print(f"The correct answer was '{ANSWER_9}'")
+        print(f"The correct answer was '{answer_9}'")
         print(f"You currently have a total of {player}/{TOTAL}!")
         print()
 
-    ask_10 = input(f"What is the maori version of '{QUESTION_10}'? (No Macron's): ")
-    if ask_10 == ANSWER_10:
+    ask_10 = input(f"What is the maori version of '{question_10}'? (No Macron's): ")
+    if ask_10 == answer_10:
         player += 1
         print()
         print("You got it right!")
@@ -180,7 +188,7 @@ def questions():
     else:
         print()
         print("Sorry, that's wrong")
-        print(f"The correct answer was '{ANSWER_10}'")
+        print(f"The correct answer was '{answer_10}'")
         print()
 
     return player

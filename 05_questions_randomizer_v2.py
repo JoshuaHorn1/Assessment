@@ -52,4 +52,3 @@ answer_10 = ANSWERS_MAORI[9]
 
 # Main Routine...
 ask_1 = input(f"What is the maori version of {question_1}?: ")
-if ask_1
