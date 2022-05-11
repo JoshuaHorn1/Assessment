@@ -1,5 +1,6 @@
 """Maori Quiz Instructions code v1
 Code used to display instructions - will be used with 02_yes_no_function_v1
+(This version was developed without the yes/no function implemented into it)
 """
 
 # Main Routine...

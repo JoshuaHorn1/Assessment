@@ -1,5 +1,7 @@
 """Maori Quiz (Numbers 1-10) Base code
 Components added after testing/trialling
+- Has the yes/no checking function
+- Has instructions displaying function
 """
 
 # Functions go here...

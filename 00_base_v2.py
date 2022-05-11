@@ -1,5 +1,9 @@
-"""Maori Quiz (Numbers 1-10) Base code v2
+"""Maori Quiz (Numbers 1-10) Base code
 Components added after testing/trialling
+- Has the yes/no checking function
+- Has instructions displaying function
+- Has the questions/answers
+- Has "play again/farewell note"
 """
 
 # Variables go here...
@@ -237,3 +241,16 @@ elif player_total <= 7:
     print("Good effort!")
 else:
     print("WOW! You did amazing!")
+
+print()
+play_again = yes_no("Would you like to play again?").lower()  # asks the user if they want to play again
+if play_again == "yes":  # if they say yes we redisplay questions
+    questions()
+else:
+    print("Thanks for playing!\n"  # if they say no display formatted farewell text
+          "I hope you had fun :D\n"
+          "\n"
+          "Goodbye!\n"
+          "**********************\n"
+          "----------------------\n"
+          "######################")

@@ -1,5 +1,6 @@
 """Maori Quiz Instructions code v2
 Adds some formatting to instruction displaying code
+(This version was developed without the yes/no function implemented into it)
 """
 
 # Main Routine...
