@@ -5,6 +5,7 @@ Components added after testing/trialling
 - Has the questions/answers
 - Has "play again/farewell note"
 - Includes text formatter and welcome note
+- Formats general text
 """
 
 # Variables go here...
@@ -39,10 +40,17 @@ def yes_no(question_text):
 
 # Function used to display instructions:
 def display_instructions():
-    print("**** How to Play ****\n"
+    print(formatter("-", "How to play:"))
+    print("\n"
+          "You will be asked a series of questions\n"
+          "on english numbers to which you will have\n"
+          "to say the Maori equivalent on it (No Macrons)\n"
           "\n"
-          "(how to use the program will go here)\n"
-          "\n")
+          "You will be scored out of 10, and at the end\n"
+          "you will be prompted if you wish to try again\n"
+          "or quit the program.\n")
+    print(formatter("!", "Good luck, and have fun!"))
+    print()
 
 
 # function containing questions and data
@@ -83,7 +91,7 @@ def questions():
     answer_9 = "iwa"
     answer_10 = "tekau"
 
-    ask_1 = input(f"What is the maori version of '{question_1}'? (No Macron's): ")  # asks the user a question
+    ask_1 = input(f"What is the maori version of '{question_1}'? (No Macron's): ").lower()  # asks the user a question
     if ask_1 == answer_1:  # if they get it right display total and congratulations message
         player += 1
         print()
@@ -97,7 +105,7 @@ def questions():
         print(f"You currently have a total of {player}/{TOTAL}!")
         print()
 
-    ask_2 = input(f"What is the maori version of '{question_2}'? (No Macron's): ")
+    ask_2 = input(f"What is the maori version of '{question_2}'? (No Macron's): ").lower()
     if ask_2 == answer_2:
         player += 1
         print()
@@ -111,7 +119,7 @@ def questions():
         print(f"You currently have a total of {player}/{TOTAL}!")
         print()
 
-    ask_3 = input(f"What is the maori version of '{question_3}'? (No Macron's): ")
+    ask_3 = input(f"What is the maori version of '{question_3}'? (No Macron's): ").lower()
     if ask_3 == answer_3:
         player += 1
         print()
@@ -125,7 +133,7 @@ def questions():
         print(f"You currently have a total of {player}/{TOTAL}!")
         print()
 
-    ask_4 = input(f"What is the maori version of '{question_4}'? (No Macron's): ")
+    ask_4 = input(f"What is the maori version of '{question_4}'? (No Macron's): ").lower()
     if ask_4 == question_4:
         player += 1
         print()
@@ -139,7 +147,7 @@ def questions():
         print(f"You currently have a total of {player}/{TOTAL}!")
         print()
 
-    ask_5 = input(f"What is the maori version of '{question_5}'? (No Macron's): ")
+    ask_5 = input(f"What is the maori version of '{question_5}'? (No Macron's): ").lower()
     if ask_5 == answer_5:
         player += 1
         print()
@@ -153,7 +161,7 @@ def questions():
         print(f"You currently have a total of {player}/{TOTAL}!")
         print()
 
-    ask_6 = input(f"What is the maori version of '{question_6}'? (No Macron's): ")
+    ask_6 = input(f"What is the maori version of '{question_6}'? (No Macron's): ").lower()
     if ask_6 == answer_6:
         player += 1
         print()
@@ -167,7 +175,7 @@ def questions():
         print(f"You currently have a total of {player}/{TOTAL}!")
         print()
 
-    ask_7 = input(f"What is the maori version of '{question_7}'? (No Macron's): ")
+    ask_7 = input(f"What is the maori version of '{question_7}'? (No Macron's): ").lower()
     if ask_7 == answer_7:
         player += 1
         print()
@@ -181,7 +189,7 @@ def questions():
         print(f"You currently have a total of {player}/{TOTAL}!")
         print()
 
-    ask_8 = input(f"What is the maori version of '{question_8}'? (No Macron's): ")
+    ask_8 = input(f"What is the maori version of '{question_8}'? (No Macron's): ").lower()
     if ask_8 == answer_8:
         player += 1
         print()
@@ -195,7 +203,7 @@ def questions():
         print(f"You currently have a total of {player}/{TOTAL}!")
         print()
 
-    ask_9 = input(f"What is the maori version of '{question_9}'? (No Macron's): ")
+    ask_9 = input(f"What is the maori version of '{question_9}'? (No Macron's): ").lower()
     if ask_9 == answer_9:
         player += 1
         print()
@@ -209,7 +217,7 @@ def questions():
         print(f"You currently have a total of {player}/{TOTAL}!")
         print()
 
-    ask_10 = input(f"What is the maori version of '{question_10}'? (No Macron's): ")
+    ask_10 = input(f"What is the maori version of '{question_10}'? (No Macron's): ").lower()
     if ask_10 == answer_10:
         player += 1
         print()
@@ -236,7 +244,7 @@ def formatter(symbol, text):
 print(formatter("#", "Welcome to The Maori Quiz!"))
 print()
 
-show_instructions = yes_no("Have you played this game before?: ")
+show_instructions = yes_no("Have you played this Quiz before?: ")
 print()
 
 if show_instructions == "No":
@@ -245,21 +253,23 @@ if show_instructions == "No":
 player_total = questions()
 print(f"Your total was {player_total}/{TOTAL}!")
 if player_total <= 3:
-    print("Practice makes perfect!")
+    print()
+    print(formatter("+", "Practice makes perfect!"))
 elif player_total <= 7:
-    print("Good effort!")
+    print()
+    print(formatter("+", "Good effort!"))
 else:
-    print("WOW! You did amazing!")
+    print()
+    print(formatter("%", "WOW! You did amazing!"))
 
 print()
-play_again = yes_no("Would you like to play again?").lower()  # asks the user if they want to play again
+play_again = yes_no("Would you like to play again?: ").lower()  # asks the user if they want to play again
+print()
 if play_again == "yes":  # if they say yes we redisplay questions
     questions()
 else:
-    print("Thanks for playing!\n"  # if they say no display formatted farewell text
-          "I hope you had fun :D\n"
-          "\n"
-          "Goodbye!\n"
-          "**********************\n"
-          "----------------------\n"
-          "######################")
+    print(formatter("*", "Thanks for playing!"))  # if they say no display formatted farewell text
+    print()
+    print("I hope you had fun :D\n"
+          "\n")
+    print(formatter("$", "Goodbye!"))
