@@ -134,7 +134,7 @@ def questions():
         print()
 
     ask_4 = input(f"What is the maori version of '{question_4}'? (No Macron's): ").lower()
-    if ask_4 == question_4:
+    if ask_4 == answer_4:
         player += 1
         print()
         print("You got it right!")
