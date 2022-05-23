@@ -43,7 +43,7 @@
       <recent name="C:\Users\Joshu\OneDrive - Middleton Grange School\Computer Science\11DTC Programming\Assessment" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.00_base_v3">
+  <component name="RunManager" selected="Python.Final Program">
     <configuration name="00_base_v2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Assessment" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -151,8 +151,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.00_base_v3" />
         <item itemvalue="Python.Final Program" />
+        <item itemvalue="Python.00_base_v3" />
         <item itemvalue="Python.00_base_v2" />
         <item itemvalue="Python.08_text_formatter_v2" />
         <item itemvalue="Python.08_text_formatter_v1" />

@@ -14,6 +14,7 @@ Components added after testing/trialling
 TOTAL = 10
 player_total = 0
 
+
 # Functions go here...
 
 
@@ -56,21 +57,10 @@ def display_instructions():
 
 # function containing questions and data
 def questions():
-
     player = 0
 
-    ask_1 = ""  # provides the variables for users to
-    ask_2 = ""  # input their answers into
-    ask_3 = ""
-    ask_4 = ""
-    ask_5 = ""
-    ask_6 = ""
-    ask_7 = ""
-    ask_8 = ""
-    ask_9 = ""
-    ask_10 = ""
-
-    ask_1 = input(f"What is the Maori version of 'one (1)'? (No Macron's): ").lower()  # asks the user a question
+    # asks the user a question:
+    ask_1 = input(f"What is the Maori version of 'one (1)'? (No Macron's): ").lower()
     if ask_1 == "tahi":  # if they get it right display total and congratulations message
         player += 1
         print()
@@ -80,7 +70,7 @@ def questions():
     else:  # if they get it wrong display the correct answer and total
         print()
         print("Sorry, that's wrong")
-        print(f"The correct answer was '{answer_1}'")
+        print(f"The correct answer was 'Tahi'")
         print(f"You currently have a total of {player}/{TOTAL}!")
         print()
 
@@ -94,7 +84,7 @@ def questions():
     else:
         print()
         print("Sorry, that's wrong")
-        print(f"The correct answer was '{answer_2}'")
+        print(f"The correct answer was 'Rua'")
         print(f"You currently have a total of {player}/{TOTAL}!")
         print()
 
@@ -108,7 +98,7 @@ def questions():
     else:
         print()
         print("Sorry, that's wrong")
-        print(f"The correct answer was '{answer_3}'")
+        print(f"The correct answer was 'Toru'")
         print(f"You currently have a total of {player}/{TOTAL}!")
         print()
 
@@ -122,7 +112,7 @@ def questions():
     else:
         print()
         print("Sorry, that's wrong")
-        print(f"The correct answer was '{answer_4}'")
+        print(f"The correct answer was 'Wha'")
         print(f"You currently have a total of {player}/{TOTAL}!")
         print()
 
@@ -136,7 +126,7 @@ def questions():
     else:
         print()
         print("Sorry, that's wrong")
-        print(f"The correct answer was '{answer_5}'")
+        print(f"The correct answer was 'Rima'")
         print(f"You currently have a total of {player}/{TOTAL}!")
         print()
 
@@ -150,7 +140,7 @@ def questions():
     else:
         print()
         print("Sorry, that's wrong")
-        print(f"The correct answer was '{answer_6}'")
+        print(f"The correct answer was 'Ono'")
         print(f"You currently have a total of {player}/{TOTAL}!")
         print()
 
@@ -164,7 +154,7 @@ def questions():
     else:
         print()
         print("Sorry, that's wrong")
-        print(f"The correct answer was '{answer_7}'")
+        print(f"The correct answer was 'Whitu'")
         print(f"You currently have a total of {player}/{TOTAL}!")
         print()
 
@@ -178,7 +168,7 @@ def questions():
     else:
         print()
         print("Sorry, that's wrong")
-        print(f"The  correct answer was '{answer_8}'")
+        print(f"The  correct answer was 'Waru'")
         print(f"You currently have a total of {player}/{TOTAL}!")
         print()
 
@@ -192,7 +182,7 @@ def questions():
     else:
         print()
         print("Sorry, that's wrong")
-        print(f"The correct answer was '{answer_9}'")
+        print(f"The correct answer was 'Iwa'")
         print(f"You currently have a total of {player}/{TOTAL}!")
         print()
 
@@ -205,7 +195,7 @@ def questions():
     else:
         print()
         print("Sorry, that's wrong")
-        print(f"The correct answer was '{answer_10}'")
+        print(f"The correct answer was 'Tekau'")
         print()
 
     return player
@@ -220,20 +210,22 @@ def formatter(symbol, text):
 
 
 # Main Routine...
-print(formatter("#", "Welcome to The Maori Quiz!"))
+print(formatter("#", "Welcome to The Maori Quiz!"))  # formatted welcome message
 print()
 
-show_instructions = yes_no("Have you played this Quiz before?: ")
+show_instructions = yes_no("Have you played this Quiz before?: ")  # calls on the yes no function to answer a question
 print()
 
-if show_instructions == "No":
+if show_instructions == "No":  # calls on the display instructions function if the user hasn't played before
     display_instructions()
 
+# creates a variable to count the total questions answered and calls
+# on the questions function to display questions at the same time:
 player_total = questions()
-print(f"Your total was {player_total}/{TOTAL}!")
+print(f"Your total was {player_total}/{TOTAL}!")  # keeps track of total and prints it
 if player_total <= 3:
     print()
-    print(formatter("+", "Practice makes perfect!"))
+    print(formatter("+", "Practice makes perfect!"))   # displays a different message depending on how well the user did;
 elif player_total <= 7:
     print()
     print(formatter("+", "Good effort!"))
