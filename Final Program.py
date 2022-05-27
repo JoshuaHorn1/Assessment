@@ -1,11 +1,6 @@
 """Maori Quiz (Numbers 1-10) Final Program.
 """
 
-# Variables go here...
-
-TOTAL = 10
-player_total = 0
-
 
 # Functions go here...
 
@@ -217,6 +212,11 @@ def formatter(symbol, text):
 
 
 # Main Routine...
+
+# Variables go here...
+TOTAL = 10
+player_total = 0
+
 # formatted welcome message
 print(formatter("#", "Welcome to The Maori Quiz!"))
 print()
